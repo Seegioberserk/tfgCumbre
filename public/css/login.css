@@ -1,0 +1,168 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* === ESTRUCTURA GENERAL === */
+body {
+  background: linear-gradient(135deg, #e9eef1, #e9eef1);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* === SECCIÓN IZQUIERDA (FORMULARIO) === */
+.left {
+  flex: 1;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: #0a3d62;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #0a3d62;
+  box-shadow: 0 0 0 2px rgba(10, 61, 98, 0.2);
+}
+
+/* === BOTÓN === */
+.btn {
+  width: 100%;
+  background: #0a3d62;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1e5f91;
+}
+
+/* === TEXTO INFERIOR === */
+.muted {
+  margin-top: 15px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.muted a {
+  color: #0a3d62;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.muted a:hover {
+  text-decoration: underline;
+}
+
+/* === SECCIÓN DERECHA (BIENVENIDA CON IMAGEN) === */
+.right {
+  flex: 1;
+  position: relative;
+  background: 
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('/storage/general/inicio.png') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+/* Capa oscura semitransparente para contraste */
+.right .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 61, 98, 0.65);
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+
+/* Contenido de bienvenida */
+.welcome {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.welcome p {
+  font-weight: 300;
+  line-height: 1.5;
+  color: #f0f0f0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 850px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .right {
+    display: none; /* Ocultamos la parte derecha en pantallas pequeñas */
+  }
+
+  .left {
+    padding: 40px 30px;
+  }
+}

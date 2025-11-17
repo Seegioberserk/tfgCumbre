@@ -1,0 +1,14 @@
+/* Cambiar color del sidebar */
+.menu-sidebar {
+    background: #2c3e50 !important; /* color de fondo (ej: azul oscuro) */
+}
+
+/* Opcional: cambiar color de los textos y enlaces del menú */
+.menu-sidebar__content .navbar__list a {
+    color: #ecf0f1 !important; /* texto claro */
+}
+
+.menu-sidebar__content .navbar__list a:hover {
+    color: #1abc9c !important; /* color al pasar el mouse */
+    background-color: rgba(255,255,255,0.1);
+}
